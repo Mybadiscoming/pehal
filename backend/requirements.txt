@@ -1,0 +1,13 @@
+# File: backend/requirements.txt
+
+fastapi
+uvicorn[standard]
+adaption
+python-dotenv
+pydantic
+sqlalchemy
+alembic
+psycopg2-binary
+pgvector
+pytest
+httpx
