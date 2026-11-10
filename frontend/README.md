@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Pehal — Frontend
 
-## Getting Started
+The frontend of Pehal, a survivor-centred support and institutional accountability platform.
 
-First, run the development server:
+Built using Next.js, React, TypeScript and Tailwind CSS, the frontend provides an accessible interface through which users can explore Pehal's four core modules.
 
-```bash
+Pages and Features
+
+Landing Page
+
+Introduces Pehal, its purpose, core features and guiding principles.
+
+Dashboard
+
+Provides access to the platform's main modules.
+
+1. Safe Space Companion
+
+A conversational interface for supportive AI-powered guidance.
+
+2. Reporting Barrier Navigator
+
+An interactive interface for exploring reporting options and possible next steps.
+
+3. Survivor Advocacy Network
+
+A directory-style interface for exploring support options based on location and support requirements.
+
+4. Institutional Accountability Tracker
+
+An interface for creating cases, managing milestones and recording follow-up actions.
+
+Additional Pages
+
+- Login interface
+- User profile
+- Settings
+
+Technology Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js App Router
+
+Project Structure
+
+frontend/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── dashboard/
+│   │   ├── safe-space/
+│   │   ├── reporting-navigator/
+│   │   ├── advocacy-network/
+│   │   ├── accountability/
+│   │   ├── login/
+│   │   ├── profile/
+│   │   └── settings/
+│   └── components/
+│       └── AppShell.tsx
+├── public/
+├── package.json
+├── next.config.ts
+└── README.md
+
+Local Setup
+
+1. Install dependencies
+
+From the frontend directory:
+
+cd frontend
+npm install
+
+2. Start the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The frontend will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+"http://localhost:3000"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Backend Connection
 
-## Learn More
+The frontend communicates with the FastAPI backend through the "/api" route.
 
-To learn more about Next.js, take a look at the following resources:
+The Next.js configuration rewrites frontend API requests to the backend server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For local development, the backend is expected to run at:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+"http://127.0.0.1:8000"
 
-## Deploy on Vercel
+Start the backend separately before testing features that require API responses.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For deployment, configure the "BACKEND_URL" environment variable to point to the deployed backend URL and redeploy the frontend.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Important Notes
+
+- The login interface is a prototype and does not provide production authentication.
+- Profile and settings features are demonstration functionality.
+- The frontend depends on the backend for the four core modules.
+- Some displayed information is demonstration data rather than verified real-world service information.
+
+---
+
+Pehal — Because support must follow through.
